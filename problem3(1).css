@@ -1,0 +1,16 @@
+table{
+            border-collapse: collapse;
+            width:70%;
+            border: solid;
+            font-family: serif;
+        }
+        th{
+            background-color: orange;
+            color: white;
+            text-align: left;
+            border-bottom: 1.5px solid;
+        }
+        td{
+              border-bottom: 1.5px solid;
+              border-right: 1px solid;
+        }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+            margin: 20px;
+        }
+
+        /* Outer box container */
+        .form-box {
+            border: 1.5px solid #000;
+            width: 310px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 4px 2px;
+            vertical-align: top;
+        }
+
+        /* Left column width */
+        td:first-child {
+            width: 110px;
+            white-space: normal;
+        }
+
+        /* Form elements contained properly inside cells */
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        /* Stacked radio and checkbox labels */
+        .option-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .option-list label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        /* Center submit/reset buttons */
+        .button-cell {
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            padding: 2px 8px;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <form>
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+
+                <tr>
+                    <td>City of<br>Employment:</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+
+                <tr>
+                    <td>Web server:</td>
+                    <td>
+                        <select name="server">
+                            <option value="">&mdash; Choose a server &mdash;</option>
+                            <option value="apache">Apache</option>
+                            <option value="nginx">Nginx</option>
+                            <option value="iis">IIS</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Please<br>specify<br>your role:</td>
+                    <td>
+                        <div class="option-list">
+                            <label><input type="radio" name="role" value="admin"> Admin</label>
+                            <label><input type="radio" name="role" value="engineer"> Engineer</label>
+                            <label><input type="radio" name="role" value="manager"> Manager</label>
+                            <label><input type="radio" name="role" value="guest"> Guest</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Single Sign-<br>on<br>to the<br>following:</td>
+                    <td>
+                        <div class="option-list">
+                            <label><input type="checkbox" name="sso" value="mail"> Mail</label>
+                            <label><input type="checkbox" name="sso" value="payroll"> Payroll</label>
+                            <label><input type="checkbox" name="sso" value="self-service"> Self-service</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="button-cell">
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>
